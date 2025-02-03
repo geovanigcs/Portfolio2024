@@ -1,0 +1,14 @@
+@keyframes fadeInUp {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .experience_img {
+    animation: fadeInUp 1.2s forwards;
+  }

@@ -1,0 +1,29 @@
+@keyframes slideInReverse {
+    0% {
+      transform: translateX(-100px) scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .logo {
+    animation: slideInReverse 1.5s forwards; 
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(500px) scale(0.5); 
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0) scale(1); 
+      opacity: 1;
+    }
+  }
+  .social {
+    animation: slideIn 1.5s forwards; 
+  }
+  
