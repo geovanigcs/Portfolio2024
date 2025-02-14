@@ -1,8 +1,40 @@
 import "../assets/Projects.css";
+import Image from "next/image";
 
-type Props = {};
-export const Projects = ({}: Props) => {
-  const projects = [1, 2, 3, 4, 5];
+export const Projects = () => {
+  const projects = [
+    {
+      id: 1,
+      image: "/Dispositivos.jpg",
+      title: "UPS Clone",
+      description:
+        "Projetinho aqui que não tem nada, mas irá servir para dizer que tem!",
+    },
+    {
+      id: 2,
+      image: "/Dispositivos2.jpg",
+      title: "Projeto 2",
+      description: "Descrição do projeto 2.",
+    },
+    {
+      id: 3,
+      image: "/Dispositivos3.jpg",
+      title: "Projeto 3",
+      description: "Descrição do projeto 3.",
+    },
+    {
+      id: 4,
+      image: "/Dispositivos4.jpg",
+      title: "Projeto 4",
+      description: "Descrição do projeto 4.",
+    },
+    {
+      id: 5,
+      image: "/Dispositivos5.jpg",
+      title: "Projeto 5",
+      description: "Descrição do projeto 5.",
+    },
+  ];
 
   return (
     <div className="projects h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
@@ -10,26 +42,27 @@ export const Projects = ({}: Props) => {
         Projetos
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
-        {projects.map((project, i) => (
+        {projects.map((project) => (
           <div
-            key={i}
-            className="w-screen flex-shrink-0 snap- flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+            key={project.id}
+            className="w-screen flex-shrink-0 snap-start flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
-            <img
+            <Image
               className="projects_img"
-              src="https://st.depositphotos.com/1000128/4310/i/380/depositphotos_43107455-stock-photo-laptop-tablet-pc-and-smartphone.jpg"
-              alt={`Project ${i + 1}`}
+              src={project.image}
+              alt={`Project ${project.id}`}
+              width={600}
+              height={400}
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
                 <span className="underline decoration-[#4169E1]/50">
-                  Case Study {i + 1} of {projects.length}:
+                  Case Study {project.id} of {projects.length}:
                 </span>
-                UPS clone
+                {project.title}
               </h4>
-              <p className="text-lg text-center md:text-left  ">
-                Projetinho aqui que não tem nada, mas irá servir para dizer que
-                tem!
+              <p className="text-lg text-center md:text-left">
+                {project.description}
               </p>
             </div>
           </div>
