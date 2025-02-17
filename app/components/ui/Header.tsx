@@ -1,16 +1,12 @@
-import '../assets/Header.css'
+import Link from "next/link";
+import "../assets/Header.css";
 
 export const Header = () => {
   return (
     <>
       <header className="sticky top-0 flex items-start justify-between max-w-7x1 mx-auto z-20 xl:items-center">
         <div className="logo flex flex-row mx-3 my-1">
-          <svg
-            width="50px"
-            height="75px"
-            viewBox="0 0 2254 3029"
-            fill="none"
-          >
+          <svg width="50px" height="75px" viewBox="0 0 2254 3029" fill="none">
             <path
               d="M1560.1 2121.01C1523.36 2109.15 1486.67 2089.08 1452.24 2059.55C1342.82 1965.75 1319.25 1518.44 1319.25 1518.44L1319.75 1517.78L1520.2 1249.21C1520.2 1249.21 1535.42 1270.53 1559.59 1305.77C1584.32 1341.9 1618.41 1392.6 1655.09 1449.91C1739.98 1582.7 1838.68 1750.98 1866.66 1855.23C1917.37 2044.13 1737.33 2178.12 1560.1 2121.01Z"
               fill="white"
@@ -511,11 +507,7 @@ export const Header = () => {
               />
             </svg>
           </a>
-          <a
-            href="mailto:geovanigcs.dev@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="#contact">
             <svg
               width="43px"
               height="43px"
@@ -530,12 +522,13 @@ export const Header = () => {
                 fill="#808080"
               />
             </svg>
-          </a>
-            <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+          </Link>
+
+          {/* <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
               Entre em contato
-            </p>
+            </p> */}
         </div>
       </header>
     </>
-  )
-}
+  );
+};
